@@ -31,5 +31,10 @@ public class HelloAppEngine extends HttpServlet {
     response.setContentType("text/plain");
     response.getWriter().println("Hello App Engine!");
 
+    String firstname = request.getParameter("firstname");
+    String lastname = request.getParameter("lastname");
+
+    response.getWriter().println(firstname + " " + lastname);
+
   }
 }
