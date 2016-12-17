@@ -22,19 +22,27 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import java.util.List;
+import java.util.ArrayList;
+
 public class HelloAppEngine extends HttpServlet {
 
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) 
-      throws IOException {
+      throws IOException 
+  {
       
     response.setContentType("text/plain");
-    response.getWriter().println("Hello App Engine!");
+    response.getWriter().println("Hello Student!");
 
     String firstname = request.getParameter("firstname");
     String lastname = request.getParameter("lastname");
+    String matrikelnumber = request.getParameter("matrikelnumber");
 
-    response.getWriter().println(firstname + " " + lastname);
+    //ObjectifyService.ofy().save().entity(user).now();
 
-  }
+	response.getWriter().println("Your name is: " + firstname + " " + lastname);
+    response.getWriter().println("Matrikel number: " +matrikelnumber);
+
+	}
 }
