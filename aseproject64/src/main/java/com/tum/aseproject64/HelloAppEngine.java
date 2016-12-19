@@ -25,6 +25,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 import java.util.ArrayList;
 
+import com.googlecode.objectify.ObjectifyService;
+
 public class HelloAppEngine extends HttpServlet {
 
   @Override
@@ -39,10 +41,13 @@ public class HelloAppEngine extends HttpServlet {
     String lastname = request.getParameter("lastname");
     String matrikelnumber = request.getParameter("matrikelnumber");
 
-    //ObjectifyService.ofy().save().entity(user).now();
+    Student student = new Student(firstname, lastname, matrikelnumber);
+
+    //ObjectifyService.ofy().save().entity(student).now();
 
 	response.getWriter().println("Your name is: " + firstname + " " + lastname);
-    response.getWriter().println("Matrikel number: " +matrikelnumber);
+  response.getWriter().println("Matrikel number: " +matrikelnumber);
+
 
 	}
 }

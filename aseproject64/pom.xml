@@ -44,6 +44,19 @@
             <version>1.2</version>
         </dependency>
 
+        <!-- [START Objectify_Dependencies] -->
+        <dependency>
+          <groupId>com.google.guava</groupId>
+          <artifactId>guava</artifactId>
+          <version>20.0</version>
+        </dependency>
+        <dependency>
+          <groupId>com.googlecode.objectify</groupId>
+          <artifactId>objectify</artifactId>
+          <version>5.1.13</version>
+        </dependency>
+        <!-- [END Objectify_Dependencies] -->
+
         <!-- Test Dependencies -->
         <dependency>
             <groupId>com.google.appengine</groupId>
